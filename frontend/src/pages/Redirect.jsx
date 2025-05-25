@@ -23,7 +23,7 @@ function Redirect() {
   return (
     <div
       className="container-fluid text-white mt-3 ms-3"
-      style={{ background: "#262727", height: "100vh" }}
+      style={{ background: "black", height: "100vh" }}
     >
       <h1>Redirecting....</h1>
     </div>

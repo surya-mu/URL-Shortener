@@ -1,0 +1,164 @@
+.btn-primary {
+  background-color: #5d3fd3;
+  color: #f2f2f2;
+}
+
+body {
+  background: black !important;
+}
+
+#root {
+  background: black !important;
+}
+
+/* .nav-link{
+    border-color: #2a2a2a;
+    border-style:solid;
+    border-width: 2px;
+    
+    border-radius: 10px;
+    background: #947fcc;
+    color: black !important;
+    padding: 0.35rem 0.4rem;
+    font-weight: 600;
+} */
+
+.nav-link {
+  /* color: #5d3fd3 !important; */
+  color: #d4ccf2 !important;
+  padding: 0.35rem 0.2rem;
+}
+
+.about {
+  background-color: black !important;
+  color: #f2f2f2 !important;
+  font-style: normal !important;
+  font-weight: 400;
+  border: none;
+  
+}
+
+.glow{
+    text-shadow: 0 0 3px rgba(242, 242, 242, 0.5)
+}
+
+.sep {
+  padding: 0px !important;
+  font-weight: 600 !important;
+  margin: 0px !important;
+}
+
+.purple {
+  color: #d4ccf2;
+}
+
+.animation1{
+  animation: down 0.4s ease-in-out  !important;
+  animation-fill-mode: forwards !important;
+  color: #f2f2f2 !important;
+  /* animation-delay: 5ms !important; */
+
+; /* Soft white glow */
+
+
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 10%;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    opacity: 30%;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+
+.darkpurple{
+  color: #5d3fd3;
+}
+
+.arrow{
+    text-align: left !important;
+    margin-left: -25%;
+    rotate: 25deg;
+}
+
+.about-button{
+    transition: transform 0.3s ease-in-out;
+    background-color: #5d3fd3;
+    color: black;
+    outline-color: black !important;
+    border: none;
+    animation: down 0.5s ease-in-out;
+    animation-delay: 0.01s;
+}
+
+.about-button:hover{
+    transform: translateY(-5px);
+    background-color: #d4ccf2;
+}
+
+
+
+/* Table stylings */
+.custom-table {
+  width: auto;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  background-color: #1c1c1c; /* Slightly lighter than black */
+  color: #f2f2f2;
+  font-weight: 400;
+  border: 2px solid #5d3fd3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #2a2a2a;
+}
+
+.custom-table th {
+  background-color: #5d3fd3;
+  color: black;
+  font-weight: 600;
+}
+
+.custom-table tr:hover {
+  background-color: #2a2a2a;
+}
+
+.custom-table a {
+  color: #d4ccf2;
+  text-decoration: none;
+}
+
+.custom-table a:hover {
+  text-decoration: underline;
+}
+
+.guide{
+  font-size: larger;
+}
+
+.accordion-button{
+  background-color:#5d3fd3 !important;
+  color: #1c1c1c !important;
+    font-weight: 650;
+   
+}
+
+
+.accordion-body{
+
+}
+

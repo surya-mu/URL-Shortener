@@ -48,14 +48,14 @@ function SignUp() {
   return (
     <div
       className="vh-100 mt-3 text-center my-auto text-white"
-      style={{ background: "rgb(38,38,39)" }}
+      style={{ background: "black" }}
     >
       <h3>Sign Up</h3>
       <form
         onSubmit={formHandler}
         className="form-control form-dark mx-auto w-50 p-5 my-5"
         data-bs-theme="dark"
-        style={{ maxWidth: "600px" }}
+        style={{ maxWidth: "600px",background:"#121212", borderColor:"#2a2a2a",borderWidth:"2px" }}
       >
         <div className="row align-items-center">
           <label htmlFor="email" className="col-form-label">

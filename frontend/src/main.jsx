@@ -13,6 +13,8 @@ import SignIn from "./pages/SignIn.jsx";
 import  { AuthProvider } from './services/AuthContext.jsx'
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { ToastContainer } from "react-toastify";
+import  './main.css'
+import Faq from "./pages/Faq.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,7 +24,7 @@ createRoot(document.getElementById("root")).render(
     <ToastContainer theme="dark" autoClose={2000} pauseOnFocusLoss={false} pauseOnHover={false} closeOnClick/>
     <Routes>
       
-      <Route path='/' element={<ProtectedRoute><App/></ProtectedRoute>}></Route>
+      <Route path='/' element={<App/>}></Route>
 
 
       <Route path="/:url" element={<Redirect/>}></Route>
@@ -31,6 +33,7 @@ createRoot(document.getElementById("root")).render(
       <Route path="/about" element={<About/>}></Route>
       <Route path='/register' element={<SignUp/>}></Route>
       <Route path='/signin' element={<SignIn/>}></Route>
+      <Route path='/faq' element={<Faq/>}></Route> 
       </Routes> 
     </BrowserRouter>
     </AuthProvider>

@@ -44,17 +44,18 @@ function UrlList() {
   return (
     <div
       className="text-white container-fluid p-1 text-center"
-      style={{ background: "#262727", height: "100vh", maxHeight: "auto" }}
+      style={{ background: "black", height: "100vh", maxHeight: "auto" }}
     >
       <h1 className="py-4">List of URL's</h1>
 
       {listed.length ? (
-        <table className="table table-dark table-striped table-bordered w-auto mx-auto my-4">
+        <table className="custom-table w-auto mx-auto my-4">
           <thead>
             <tr>
               <th scope="col"> Original Link</th>
               <th scope="col"> Zapped Link</th>
               <th scope="col">Clicks</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
