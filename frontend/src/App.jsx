@@ -98,8 +98,25 @@
             <div className="animation1" id="animation1">You are one click away <br />  from  <span className="darkpurple">Zapping</span> your URL</div>
             <img src="https://img.icons8.com/?size=100&id=70734&format=png&color=ffffff" alt="" className="animation1 mt-5 arrow" />
             
-            <div><Link to="/register"><button className="btn btn-light darkpurple p-3 text-center mx-auto about-button" style={{borderRadius:"20px",fontSize:"20px",fontWeight:"700"}}>Get Started</button></Link></div> 
-            <div> <Link to="/faq" className="btn purple glow" style={{fontSize:"20px"}}>Learn More</Link></div>   
+            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+  <Link to="/register" className="d-flex justify-content-center text-decoration-none">
+    <button
+      className="btn btn-light darkpurple p-3 about-button"
+      style={{ borderRadius: "20px", fontWeight: "700", fontSize: "clamp(14px, 2vw, 20px)" }}
+    >
+      Get Started
+    </button>
+  </Link>
+  <Link to="/faq" className="d-flex justify-content-center">
+    <button
+      className="btn purple glow"
+      style={{ fontSize: "clamp(14px, 2vw, 20px)" }}
+    >
+      Learn More
+    </button>
+  </Link>
+</div>
+
       </div>}    
         {/* <ToastContainer theme="dark" closeOnClick='true'/> */}
         {/* <Navbar/> */}
