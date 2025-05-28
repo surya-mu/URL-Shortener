@@ -54,17 +54,19 @@ function SignIn() {
 
   return (
     <div
-      className="vh-100 mt-3 text-center my-auto text-white"
+      className="container-fluid d-flex justify-content-center align-items-center vh-100 text-center p-3 text-white"
       style={{ background: "black" }}
     >
+      <div className="row w-100 d-flex justify-content-center">
+        <div className="col-12 col-sm-8 col-md-6 col-lg-4">
       <h3 className="text-center">Login</h3>
       <form
         onSubmit={formHandler}
-        className="form-control form-dark mx-auto w-50 p-5 my-5"
+        className="form-dark p-4 shadow-rounded"
         data-bs-theme="dark"
         style={{ maxWidth: "600px",background:"#121212" }}
       >
-        <div className="row align-items-center">
+        <div className="row d-flex flex-column align-items-center">
           <label htmlFor="email" className="col-form-label">
             Email ID
           </label>
@@ -73,22 +75,24 @@ function SignIn() {
             name="email"
             data-bs-theme="dark"
             placeholder="Enter Email ID"
-            className="form-control mx-auto w-50 text-center border-2 mb-3 "
+            className="form-control text-center border-2 mb-3 "
+            style={{maxWidth:"400px"}}
             required
             minLength={5}
             onChange={userHandler}
             value={userName}
           />
         </div>
-        <div className="row align-items-center">
+        <div className="row d-flex flex-column align-items-center">
           <label htmlFor="password" className="col-form-label">
             Password
           </label>
           <input
             type="password"
-            className="form-control mx-auto w-50 text-center border-2 mb-3"
+            className="form-control text-center border-2 mb-3"
             placeholder="Enter Password"
             name="password"
+            style={{maxWidth:"400px"}}
             required
             autoComplete="false"
             minLength={8}
@@ -129,6 +133,8 @@ function SignIn() {
         pauseOnHover={false}
         autoClose={1000}
       /> */}
+      </div>
+      </div>
     </div>
   );
 }

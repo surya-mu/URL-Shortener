@@ -47,17 +47,20 @@ function SignUp() {
   };
   return (
     <div
-      className="vh-100 mt-3 text-center my-auto text-white"
+      className="container-fluid d-flex justify-content-center align-items-center vh-100 mt-3 text-center text-white"
       style={{ background: "black" }}
     >
-      <h3>Sign Up</h3>
+      <div className="row w-100 d-flex justify-content-center">
+        <div className="col-12 col-md-6 col-sm-8 col-lg-4">
+          
+      <h3 className="text-center">Sign Up</h3>
       <form
         onSubmit={formHandler}
-        className="form-control form-dark mx-auto w-50 p-5 my-5"
+        className="form-dark p-4 rounded-shadow"
         data-bs-theme="dark"
         style={{ maxWidth: "600px",background:"#121212", borderColor:"#2a2a2a",borderWidth:"2px" }}
       >
-        <div className="row align-items-center">
+        <div className="row d-flex justify-content-center align-items-center">
           <label htmlFor="email" className="col-form-label">
             Email ID
           </label>
@@ -66,23 +69,25 @@ function SignUp() {
             name="email"
             data-bs-theme="dark"
             placeholder="Enter Email ID"
-            className="form-control mx-auto w-50 text-center border-2 mb-3 "
+            className="form-control text-center border-2 mb-3"
             required
+            style={{maxWidth:"400px"}}
             minLength={5}
             onChange={userHandler}
             value={userName}
           />
         </div>
-        <div className="row align-items-center">
+        <div className="row d-flex justify-content-center align-items-center">
           <label htmlFor="password" className="col-form-label">
             Password
           </label>
           <input
             type="password"
-            className="form-control mx-auto w-50 text-center border-2 mb-3"
+            className="form-control text-center border-2 mb-3"
             placeholder="Enter Password"
             name="password"
             required
+            style={{maxWidth:"400px"}}
             minLength={8}
             onChange={passHandler}
             value={userPassword}
@@ -119,6 +124,8 @@ function SignUp() {
       pauseOnFocusLoss={false}
       pauseOnHover={false}/> */}
     </div>
+        </div>
+      </div>
   );
 }
 

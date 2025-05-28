@@ -10,7 +10,7 @@ function About() {
           <div className="d-flex vh-100 flex-column justify-content-center align-items-center">
             <img src={surya} alt="Portfolio image" width={140} height={140}/>
             <h3> Created by Surya M.U.</h3>
-              <div className="p-3 links d-flex flex-row gap-3">
+              <div className="p-3 links d-flex flex-row flex-wrap gap-3">
                <div>
                  <button className="btn btn-dark"><a className="text-decoration-none text-white" href="https://linkedin.com/in/suryamu7" target="_blank" rel="noopener noreferrer">Linkedin</a></button>
                </div>

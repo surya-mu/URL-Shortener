@@ -15,7 +15,7 @@ function Navbar() {
   console.log(isAuthenticated);
   return (
     <nav
-      className="navbar bg-body-tertiary m-0 p-0"
+      className="navbar navbar-expand-lg m-0 p-0"
       style={{ background: "black" }}
     >
       <div
@@ -35,39 +35,62 @@ function Navbar() {
             className="inline p-0"
           />
         </Link>
-        <div className="d-flex gap-4 pe-5 align-items-center">
+         <button
+          className="navbar-toggler me-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" style={{stroke:"white !important;"}}/>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav navbar-nav ms-auto pe-3 d-flex align-items-center gap-2">
+            <li className="nav-item">
             <Link className="nav-link text-white" to="/">
               Home
             </Link>
+            </li>
           {isAuthenticated && (
+            <li className="nav-item">
             <Link className="nav-link text-white" to="/my-url">
               My URLs
             </Link>
+            </li>
           )}
 
-          <Link className="nav-link text-white" to="/faq"> Guide </Link>
+         <li className="nav-item"> <Link className="nav-link text-white" to="/faq"> Guide </Link></li>
           
           
 
           {!isAuthenticated && (
-            <Link to="/signin" className="nav-link text-white">
+           <li className="nav-item"> <Link to="/signin" className="nav-link text-white">
               Sign In 
             </Link>
+            </li>
           )}
-          {!isAuthenticated && ( <span className="sep"> / </span>)}
+          {!isAuthenticated && ( <li className="nav-item"><span className="sep"> / </span></li>)}
           {!isAuthenticated && (
-            <Link to="register" className="nav-link text-white">
+            <li className="nav-item"><Link to="register" className="nav-link text-white">
               Register
             </Link>
+            </li>
           )}
+          <li className="nav-item">
             <Link className="nav-link text-white about" to="/about">
             About
           </Link> 
+          </li>
           {isAuthenticated && (
+            <li className="nav-item">
             <button className="btn btn-danger" onClick={LogoutHandler}>
               Logout
             </button>
+            </li>
           )}
+        </ul>
         
         </div>
       </div>
