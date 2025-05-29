@@ -1,10 +1,13 @@
 const express = require("express");
-const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken')
+const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 const urlModel = require("../models/urlSchema");
 
 const postShorten = async (req, res) => {
-  const originalURL = req.body.inputUrl;
+  let originalURL = req.body.inputUrl;
+  if (!/^https?:\/\//i.test(originalURL)) {
+    originalURL = "https://" + originalURL;
+  }
   // res.json({ posted: "True", inputUrl: originalURL });
   try {
     const token = req.headers.authorization?.split(" ")[1];
@@ -18,8 +21,8 @@ const postShorten = async (req, res) => {
 
     const urlModelEntry = new urlModel({
       originUrl: originalURL,
-      userid:userid,
-      newUrl: newUrl
+      userid: userid,
+      newUrl: newUrl,
     });
 
     const savedEntry = await urlModelEntry.save();
@@ -32,11 +35,9 @@ const postShorten = async (req, res) => {
       newUrl: savedEntry.newUrl,
       userid: userid,
     });
-
-
-  } catch(error) {
+  } catch (error) {
     res.json({ posted: "false", error: error });
-    console.log(error)
+    console.log(error);
   }
 };
 
@@ -45,14 +46,14 @@ const getShorten = async (req, res) => {
 };
 
 const getList = async (req, res) => {
-  const token = req.headers.authorization?.split(" ")[1]
-  if(!token){
-    res.status(404).send('User Not Authenticated');
-    console.log('user not Authenticated...')
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) {
+    res.status(404).send("User Not Authenticated");
+    console.log("user not Authenticated...");
   }
-  const decoded = jwt.verify(token,process.env.JWT_SECRET);
-  const userid = decoded.userID
-  const listed = await urlModel.find({userid:userid});
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  const userid = decoded.userID;
+  const listed = await urlModel.find({ userid: userid });
   res.json({ list: listed });
   console.log(listed);
 };
