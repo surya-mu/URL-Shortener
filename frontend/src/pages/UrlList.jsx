@@ -123,7 +123,7 @@ function UrlList() {
               <div>
                 <strong>Zapped Link:</strong>{" "}
                 <a
-                  href={`${frontend}/${item.newUrl}`}
+                  href={`${item.originUrl}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-break"
