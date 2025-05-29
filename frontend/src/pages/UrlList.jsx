@@ -72,7 +72,7 @@ function UrlList() {
                   </td>
                   <td>
                     <a
-                      href={`${frontend}/${item.newUrl}`}
+                      href={`${item.originUrl}`}
                       target="_blank"
                       rel="noreferrer"
                       className="text-break"
