@@ -44,7 +44,6 @@ function UrlList() {
     >
       <h1 className="py-4">List of URL's</h1>
 
- 
       <div className="table-responsive d-none d-md-block">
         {listed.length ? (
           <table className="custom-table table table-dark table-sm w-auto mx-auto my-4">
@@ -72,7 +71,7 @@ function UrlList() {
                   </td>
                   <td>
                     <a
-                      href={`${item.originUrl}`}
+                      href={`${frontend}/${item.newUrl}`}
                       target="_blank"
                       rel="noreferrer"
                       className="text-break"
@@ -100,7 +99,6 @@ function UrlList() {
         )}
       </div>
 
-
       <div className="d-block d-md-none">
         {listed.length ? (
           listed.map((item) => (
@@ -116,14 +114,19 @@ function UrlList() {
             >
               <div>
                 <strong>Original Link:</strong>{" "}
-                <a href={item.originUrl} target="_blank" rel="noreferrer" className="text-break">
+                <a
+                  href={item.originUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-break"
+                >
                   {item.originUrl}
                 </a>
               </div>
               <div>
                 <strong>Zapped Link:</strong>{" "}
                 <a
-                  href={`${item.originUrl}`}
+                  href={`${frontend}/${item.newUrl}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-break"
